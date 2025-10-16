@@ -1,10 +1,9 @@
-import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>🍳 Recipe App</Text>
+      <Text style={styles.title}>🍳Recipe App</Text>
       <Text>Welcome! Explore and cook your favorite meals.</Text>
       <Button title="View Recipe" onPress={() => navigation.navigate('Recipe')} />
     </View>
@@ -12,6 +11,8 @@ export default function HomeScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  title: { fontSize: 24, fontWeight: 'bold', marginBottom: 10 }
+  container: { flex: 1, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 20, backgroundColor: '#fff',},
+  title: { fontSize: 32, fontWeight: 'bold', marginBottom: 10, textAlign: 'center',},
+  subtitle: { fontSize: 18, color: '#666', marginBottom: 30, textAlign: 'center',},
+  buttonContainer: { marginTop: 20, width: '60%',},
 });
